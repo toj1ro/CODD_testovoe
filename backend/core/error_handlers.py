@@ -5,7 +5,7 @@ from pydantic import ValidationError
 from starlette.exceptions import HTTPException
 from starlette.requests import Request
 from starlette.responses import JSONResponse
-from starlette.status import HTTP_404_NOT_FOUND, HTTP_400_BAD_REQUEST
+from starlette.status import HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND
 
 from backend.core.errors import NotFoundObject
 
@@ -25,8 +25,8 @@ async def http400_error_handler(
 
 
 async def http404_error_handler(
-        _: Request,
-        exc: Union[NotFoundObject],
+    _: Request,
+    exc: Union[NotFoundObject],
 ) -> JSONResponse:
     return JSONResponse(
         {"message": str(exc)},

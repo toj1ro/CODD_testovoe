@@ -1,6 +1,9 @@
-from parser.services.service import parse_news_from_mosday_metro, insert_data_to_news
+from parser.services.service import (
+    insert_data_to_news_table,
+    parse_news_from_mosday_metro,
+)
 
 
-def parser():
+def parser() -> None:
     data = parse_news_from_mosday_metro()
-    insert_data_to_news(data)
+    insert_data_to_news_table(data)

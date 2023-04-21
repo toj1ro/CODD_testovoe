@@ -1,8 +1,8 @@
 from logging.config import fileConfig
 
+from alembic import context
 from sqlalchemy import engine_from_config, pool
 
-from alembic import context
 from backend.core.config import get_app_settings
 
 settings = get_app_settings()
