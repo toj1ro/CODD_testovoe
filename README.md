@@ -1,8 +1,8 @@
 # CODD_testovoe
 ### Чтобы развернуть проект в директории с файлом main.py введите команды:
 
-$ docker-compose build \
-$ docker-compose up
+`docker-compose build` \
+`docker-compose up`
 
 Swager можно получить по пути 127.0.0.1:8001/docs
 
