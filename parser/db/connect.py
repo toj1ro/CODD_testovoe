@@ -5,12 +5,12 @@ import psycopg2
 
 class Database:
     def __init__(
-        self,
-        host: Optional[str],
-        database: Optional[str],
-        user: Optional[str],
-        password: Optional[str],
-        port: Optional[str],
+            self,
+            host: str,
+            database: str,
+            user: str,
+            password: str,
+            port: str,
     ) -> None:
         self.__conn = psycopg2.connect(
             host=host,
